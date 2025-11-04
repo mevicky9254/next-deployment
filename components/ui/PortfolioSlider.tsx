@@ -44,7 +44,7 @@ const portfolioItems = [
 
 const PortfolioSlider = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white py-16 md:py-24 overflow-hidden">
+    <section className="bg-[#0f172a] text-white py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto">
         {/* --- Section Header --- */}
         <div className="text-center max-w-4xl mx-auto">

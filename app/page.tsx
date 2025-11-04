@@ -2,17 +2,35 @@
 
 import Hero from '@/components/ui/Hero';
 import PortfolioSlider from "@/components/ui/PortfolioSlider";
+import WebTechnologies from "@/components/ui/WebTechnologies";
+import { Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
+import FaqSection from "@/components/ui/FaqSection";
+import ContactSection from '@/components/ui/ContactSection';
+import {
+  ShoppingCart,
+  Plane,
+  HeartHandshake,
+  Building2,
+  GraduationCap,
+  Truck,
+  Lightbulb,
+  Umbrella,
+  FolderKanban,
+  Factory,
+} from "lucide-react";
 
 export default function Home() {
   return (
-     <>
+    <>
       <Hero />
       {/* ============== START: THEME-UPDATED EMPOWERING BUSINESS SECTION ============== */}
       <section className="bg-white py-16 md:py-24">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* --- Left Column: Text Content --- */}
             <div>
               {/* THEME UPDATE: Color changed to cyan */}
@@ -64,10 +82,10 @@ export default function Home() {
       {/* ============== END: THEME-UPDATED EMPOWERING BUSINESS SECTION ============== */}
 
 
-       {/* ============== START: NEW CORE SERVICES SECTION ============== */}
+      {/* ============== START: NEW CORE SERVICES SECTION ============== */}
       <section className="bg-[#0f172a] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
-          
+
           {/* --- Section Header --- */}
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
@@ -167,8 +185,193 @@ export default function Home() {
       </section>
       {/* ============== END: NEW CORE SERVICES SECTION ============== */}
 
+      <WebTechnologies />
 
       <PortfolioSlider />
+
+      {/* ================================================================== */}
+      {/* START: MODIFIED Let's Build Your Next Project (CTA Section)      */}
+      {/* ================================================================== */}
+      <section className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+
+            {/* Left Column: Video */}
+            <div className="py-12 lg:py-0">
+              <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-2xl shadow-2xl">
+                <video
+                  className="h-full w-full object-cover"
+                  src="/contact-us-video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Right Column: Text Content */}
+            <div className="py-12 text-center text-white lg:py-20 lg:text-left">
+              <h1 className="text-4xl font-bold leading-tight sm:text-3xl lg:text-5xl">
+                Let&apos;s Build Your Next Project With Us
+              </h1>
+              <p className="mt-4 text-m text-gray-100">
+                Need a new website or want to upgrade your existing one? Share
+                your idea with us. We are here to guide you thoroughly.
+                Let&apos;s connect & get started.
+              </p>
+              <div className="mt-6">
+                <Link href="/contact">
+                  <button className="rounded-lg bg-white px-8 py-3.5 font-semibold text-cyan-600 transition hover:bg-gray-200">
+                    Contact Now
+                  </button>
+                </Link>
+              </div>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 lg:justify-start">
+                <div className="flex items-center gap-2">
+                  <Image src="/indian-flag.svg" alt="India flag" width={24} height={24} />
+                  <span className="font-medium">+91 6204853926</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="h-5 w-5" />
+                  <a href="mailto:zovinityofficial@gmail.com" className="font-medium hover:underline">
+                    zovinityofficial@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      {/* ================================================================== */}
+      {/* END: CTA Section                                                   */}
+      {/* ================================================================== */}
+
+
+
+      {
+        /* ============== START: INDUSTRIES WE SERVE SECTION ============== */
+      }
+      <section className="bg-black text-white py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* --- Section Header --- */}
+          <div className="text-center max-w-5xl mx-auto">
+            <p className="font-semibold text-cyan-400 tracking-widest mb-4">
+              INDUSTRIES WE PROUDLY SERVE
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
+              Smart Digital Solutions for Every Sector
+            </h2>
+            <p className="text-gray-400 mt-6 text-base leading-relaxed">
+              We believe every industry is unique and deserves tailored digital solutions to thrive. At Zovinity, our web design and development services in India help businesses across sectors overcome challenges, drive growth, and achieve their goals.
+            </p>
+          </div>
+
+          {/* --- Industries Grid --- */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-16">
+            {/* Card 1: Ecommerce */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <ShoppingCart
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Ecommerce</p>
+            </div>
+
+            {/* Card 2: Travel & Hospitality */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <Plane
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">
+                Travel & Hospitality
+              </p>
+            </div>
+
+            {/* Card 3: Media */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <FolderKanban
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Media</p>
+            </div>
+
+            {/* Card 4: Real Estate & Construction */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <Building2
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">
+                Real Estate & Construction
+              </p>
+            </div>
+
+            {/* Card 5: Education */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <GraduationCap
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Education</p>
+            </div>
+
+            {/* Card 6: Logistics */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <Truck
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Logistics</p>
+            </div>
+
+            {/* Card 7: Fintech */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <Lightbulb
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Fintech</p>
+            </div>
+
+            {/* Card 8: Insurance */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <Umbrella
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Insurance</p>
+            </div>
+
+
+            {/* Card 9: Healthcare */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <HeartHandshake
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Fitness & Healthcare Sector</p>
+            </div>
+
+            {/* Card 10: Manufacturing */}
+            <div className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800 hover:border-cyan-500">
+              <Factory
+                size={48}
+                className="text-gray-500 transition-colors group-hover:text-cyan-400"
+              />
+              <p className="mt-4 font-semibold text-gray-300">Manufacturing</p>
+            </div>
+          </div>
+        </div>
+      </section>;
+
+      <FaqSection />
+      <ContactSection />
     </>
   );
 }
