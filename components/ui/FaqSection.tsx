@@ -1,6 +1,7 @@
 // app/components/ui/FaqSection.tsx
 "use client";
 
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
